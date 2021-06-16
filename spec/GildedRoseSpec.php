@@ -80,7 +80,6 @@ describe('Gilded Rose', function () {
                 expect($gr->getItem(0)->sellIn)->toBe(-11);
             });
         });
-        /*
         context('Sulfuras Items', function () {
             it('updates Sulfuras items before the sell date', function () {
                 $gr = new GildedRose([new Legendary('Sulfuras, Hand of Ragnaros', 10, 5)]);

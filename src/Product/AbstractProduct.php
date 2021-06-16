@@ -8,6 +8,8 @@ use App\Item;
 
 abstract class AbstractProduct extends Item implements ProductInterface
 {
+    public const SELL_IN_INCREMENTS = -1;
+
     public const QUALITY_INCREMENTS = -1;
     public const QUALITY_INCREMENTS_TWICE_AS_FAST = 0;
     public const QUALITY_MIN = 0;
@@ -21,7 +23,7 @@ abstract class AbstractProduct extends Item implements ProductInterface
 
     private function changeSellIn()
     {
-        $this->sellIn--;
+        $this->sellIn += static::SELL_IN_INCREMENTS;
     }
 
     private function changeQuality()
