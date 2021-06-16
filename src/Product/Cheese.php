@@ -1,5 +1,6 @@
 <?php
 
+declare(strict_types=1);
 
 namespace App\Product;
 
@@ -8,6 +9,10 @@ namespace App\Product;
  */
 class Cheese extends AbstractProduct
 {
-    // "Aged Brie" actually increases in Quality the older it gets
+    /**
+     * "Aged Brie" actually increases in Quality the older it gets
+     *
+     * @inheritdoc
+     */
     public const QUALITY_INCREMENTS = 1;
 }

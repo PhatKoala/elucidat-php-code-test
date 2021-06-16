@@ -15,17 +15,18 @@ class GildedRose
     private array $items;
 
     /**
-     * @var LoggerInterface
+     * @var LoggerInterface|null
      */
-    private LoggerInterface $logger;
+    private ?LoggerInterface $logger;
 
     /**
      * @param Item[] $items
-     * @param LoggerInterface|null $logger
+     * @param LoggerInterface|null $logger Except null so I don't actually have to implement a logger
      */
     public function __construct(array $items, LoggerInterface $logger = null)
     {
         $this->items = $items;
+        $this->logger = $logger;
     }
 
     /**
@@ -40,6 +41,9 @@ class GildedRose
         );
     }
 
+    /**
+     * Change items stock management after each day
+     */
     public function nextDay()
     {
         foreach ($this->items as $item) {
@@ -55,50 +59,6 @@ class GildedRose
                     ));
                 }
             }
-
-//            if ($item->name != 'Aged Brie' and $item->name != 'Backstage passes to a TAFKAL80ETC concert') {
-//                if ($item->quality > 0) {
-//                    if ($item->name != 'Sulfuras, Hand of Ragnaros') {
-//                        $item->quality = $item->quality - 1;
-//                    }
-//                }
-//            } else {
-//                if ($item->quality < 50) {
-//                    $item->quality = $item->quality + 1;
-//                    if ($item->name == 'Backstage passes to a TAFKAL80ETC concert') {
-//                        if ($item->sellIn < 11) {
-//                            if ($item->quality < 50) {
-//                                $item->quality = $item->quality + 1;
-//                            }
-//                        }
-//                        if ($item->sellIn < 6) {
-//                            if ($item->quality < 50) {
-//                                $item->quality = $item->quality + 1;
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-//            if ($item->name != 'Sulfuras, Hand of Ragnaros') {
-//                $item->sellIn = $item->sellIn - 1;
-//            }
-//            if ($item->sellIn < 0) {
-//                if ($item->name != 'Aged Brie') {
-//                    if ($item->name != 'Backstage passes to a TAFKAL80ETC concert') {
-//                        if ($item->quality > 0) {
-//                            if ($item->name != 'Sulfuras, Hand of Ragnaros') {
-//                                $item->quality = $item->quality - 1;
-//                            }
-//                        }
-//                    } else {
-//                        $item->quality = $item->quality - $item->quality;
-//                    }
-//                } else {
-//                    if ($item->quality < 50) {
-//                        $item->quality = $item->quality + 1;
-//                    }
-//                }
-//            }
         }
     }
 }

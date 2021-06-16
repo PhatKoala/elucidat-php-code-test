@@ -1,5 +1,6 @@
 <?php
 
+declare(strict_types=1);
 
 namespace App\Product;
 
@@ -8,7 +9,17 @@ namespace App\Product;
  */
 class Legendary extends AbstractProduct
 {
-    // "Sulfuras", being a legendary item, never has to be sold or decreases in Quality
+    /**
+     * "Sulfuras", being a legendary item, never has to be sold or decreases in Quality
+     *
+     * @inheritdoc
+     */
     public const SELL_IN_INCREMENTS = 0;
+
+    /**
+     * "Sulfuras", being a legendary item, never has to be sold or decreases in Quality
+     *
+     * @inheritdoc
+     */
     public const QUALITY_INCREMENTS = 0;
 }

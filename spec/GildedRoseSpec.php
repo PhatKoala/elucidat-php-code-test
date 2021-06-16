@@ -1,6 +1,5 @@
 <?php
 
-use App\Item;
 use App\GildedRose;
 use App\Product\BackstagePass;
 use App\Product\Cheese;
