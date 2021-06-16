@@ -1,25 +1,37 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App;
 
 class GildedRose
 {
-    private $items;
+    /**
+     * @var Item[] An array of products
+     */
+    private array $items;
 
+    /**
+     * @param Item[] $items
+     */
     public function __construct(array $items)
     {
         $this->items = $items;
     }
 
-    public function getItem($which = null)
+    /**
+     * @param null $name
+     * @return array|Item
+     */
+    public function getItem($name = null)
     {
-        return ($which === null
+        return ($name === null
             ? $this->items
-            : $this->items[$which]
+            : $this->items[$name]
         );
     }
 
-    public function nextDay()
+    public function nextDay(): void
     {
         foreach ($this->items as $item) {
             if ($item->name != 'Aged Brie' and $item->name != 'Backstage passes to a TAFKAL80ETC concert') {
