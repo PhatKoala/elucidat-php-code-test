@@ -36,7 +36,6 @@ describe('Gilded Rose', function () {
                 expect($gr->getItem(0)->sellIn)->toBe(4);
             });
         });
-        /*
         context('Brie Items', function () {
             it('updates Brie items before the sell date', function () {
                 $gr = new GildedRose([new Cheese('Aged Brie', 10, 5)]);
