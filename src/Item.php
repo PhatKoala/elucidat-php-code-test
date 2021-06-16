@@ -36,7 +36,7 @@ class Item
     /**
      * @return string
      */
-    public function __toString()
+    public function __toString(): string
     {
         return "{$this->name}, {$this->sellIn}, {$this->quality}";
     }
