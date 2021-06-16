@@ -21,12 +21,12 @@ abstract class AbstractProduct extends Item implements ProductInterface
         $this->changeQuality();
     }
 
-    private function changeSellIn()
+    protected function changeSellIn()
     {
         $this->sellIn += static::SELL_IN_INCREMENTS;
     }
 
-    private function changeQuality()
+    protected function changeQuality()
     {
         $this->quality += static::QUALITY_INCREMENTS;
 

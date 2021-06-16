@@ -100,7 +100,6 @@ describe('Gilded Rose', function () {
                 expect($gr->getItem(0)->sellIn)->toBe(-1);
             });
         });
-        /*
         context('Backstage Passes', function () {
             it('updates Backstage pass items long before the sell date', function () {
                 $gr = new GildedRose([new BackstagePass('Backstage passes to a TAFKAL80ETC concert', 10, 11)]);
