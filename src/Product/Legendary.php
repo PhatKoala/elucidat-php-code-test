@@ -22,4 +22,18 @@ class Legendary extends AbstractProduct
      * @inheritdoc
      */
     public const QUALITY_INCREMENTS = 0;
+
+    /**
+     * "Sulfuras" is a legendary item and as such its Quality is 80 and it never alters.
+     *
+     * @inheritdoc
+     */
+    public const QUALITY_MIN = 80;
+
+    /**
+     * "Sulfuras" is a legendary item and as such its Quality is 80 and it never alters.
+     *
+     * @var integer The maximum value for the quality
+     */
+    public const QUALITY_MAX = 80;
 }
