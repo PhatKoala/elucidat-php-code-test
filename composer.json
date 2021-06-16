@@ -6,5 +6,8 @@
         "psr-4": {
             "App\\": "src"
         }
+    },
+    "require": {
+        "psr/log": "^1.1"
     }
 }
